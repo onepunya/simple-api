@@ -2,9 +2,9 @@
   "name": "simple-api",
   "version": "1.0.0",
   "description": "simple rest api using expressJS && swagger UI",
-  "main": "system/app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node system/app.js"
+    "start": "node index.js"
   },
   "keywords": ["api", "expressJS"],
   "author": "ArifzynXD",
