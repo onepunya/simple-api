@@ -1,10 +1,32 @@
 module.exports = {
-  openapi: '3.0.0',
+ openapi: "3.0.3",
   info: {
-    title: 'Express API with Swagger',
-    version: '1.0.0',
-    description: 'API documentation using Swagger',
+    title: "onesytex Api Documentation",
+    description: "free rest full api",
+    termsOfService: "",
+    contact: {
+      email: "idwolf503@gmail.com"
+    },
+    license: {
+      name: "onesytex",
+      url: "https://github.com/onepunya"
+    },
+    version: "1.0.11"
   },
+  externalDocs: {
+    description: "Support this project",
+    "Whatsapp Grup": "https://chat.whatsapp.com/FRL4FzReE0X4qf8Yy80RkW"
+  },
+  tags: [
+    {
+      name: "Artificial Intelligence",
+      description: "API endpoints for Artificial intelligence content from various platforms."
+    },
+    {
+      name: "Image Processig",
+      description: "API endpoints for processing image content from various platforms."
+    }
+  ],
   paths: {
     '/api/data': {
       get: {
@@ -49,16 +71,16 @@ module.exports = {
         },
       },
     },
-    '/api/user/{id}': {
+    '/api/tiktok-dl': {
       get: {
-        summary: 'Get user by ID',
-        description: 'Get user details based on the provided ID',
+        summary: 'tiktok download',
+        description: 'downloader tiktok slide & video',
         parameters: [
           {
-            in: 'path',
-            name: 'id',
+            in: 'query',
+            name: 'url',
             required: true,
-            description: 'ID of the user',
+            description: 'tiktok url',
           },
         ],
         responses: {
@@ -66,10 +88,7 @@ module.exports = {
             description: 'User details retrieved successfully',
             content: {
               'application/json': {
-                example: {
-                  username: 'john_doe',
-                  email: 'john@example.com',
-                },
+           
               },
             },
           },
