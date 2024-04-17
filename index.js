@@ -15,7 +15,7 @@ const swaggerOptions = {
 
 const swaggerSpec = swaggerJSDoc(swaggerOptions);
 app.get('/', (req, res) => {
-  res.send(path.join(__dirname, './lib/index.html'));
+  res.sendFile(path.join(__dirname, './lib/index.html'));
 });
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
