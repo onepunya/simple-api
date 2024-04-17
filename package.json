@@ -4,9 +4,8 @@
   "description": "simple rest api using expressJS && swagger UI",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "echo \"Error: no test specified\" && exit 1"
   },
-    "homepage": "https://github.com/ArifzynXD/simple-api#readme",
   "dependencies": {
     "express": "^4.18.2",
     "swagger-jsdoc": "^6.2.8",
