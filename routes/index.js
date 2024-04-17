@@ -13,8 +13,6 @@ const googlekey = "AIzaSyAY8DjFZHICDZ-TeHNN6lnEFoB-qczmXxE"
 global.creator = 'Mr.one | github/onepunya'
 const router = express.Router();
 const PORT = process.env.PORT || 3000;
-router.enable("trust proxy");
-router.set("json spaces", 2);
 
 // Middleware untuk CORS
 router.use(cors());
