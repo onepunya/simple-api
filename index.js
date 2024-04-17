@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require("path") 
 const swaggerJSDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDefinitions = require('./swagger/swaggerDefinition');
@@ -13,9 +14,8 @@ const swaggerOptions = {
 };
 
 const swaggerSpec = swaggerJSDoc(swaggerOptions);
-
 app.get('/', (req, res) => {
-  res.send("Welcome To Simple-api API")
+  res.send(path.join(__dirname, './lib/index.html'));
 });
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
